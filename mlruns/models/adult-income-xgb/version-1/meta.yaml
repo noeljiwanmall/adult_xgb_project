@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1753838406871
+current_stage: Production
+description: null
+last_updated_timestamp: 1753838406872
+name: adult-income-xgb
+run_id: 7395ee1474ea4e7eaa12d273bd959343
+run_link: null
+source: file:///Users/noeljiwanmall/Documents/datascience/adult_xgb_project/mlruns/753069459791219424/7395ee1474ea4e7eaa12d273bd959343/artifacts/pipeline_model
+status: READY
+status_message: null
+storage_location: file:///Users/noeljiwanmall/Documents/datascience/adult_xgb_project/mlruns/753069459791219424/7395ee1474ea4e7eaa12d273bd959343/artifacts/pipeline_model
+user_id: null
+version: 1

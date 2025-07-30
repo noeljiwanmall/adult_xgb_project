@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/noeljiwanmall/Documents/datascience/adult_xgb_project/mlruns/753069459791219424/c2da726ae8864784b3154f32c2ea0d22/artifacts
+end_time: 1753838337642
+entry_point_name: ''
+experiment_id: '753069459791219424'
+lifecycle_stage: active
+run_id: c2da726ae8864784b3154f32c2ea0d22
+run_name: run_1
+run_uuid: c2da726ae8864784b3154f32c2ea0d22
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753838330000
+status: 4
+tags: []
+user_id: noeljiwanmall
