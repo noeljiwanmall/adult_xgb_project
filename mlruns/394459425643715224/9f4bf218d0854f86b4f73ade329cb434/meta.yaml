@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/9f4bf218d0854f86b4f73ade329cb434/artifacts
+end_time: 1754084160376
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: 9f4bf218d0854f86b4f73ade329cb434
+run_name: incongruous-snipe-53
+run_uuid: 9f4bf218d0854f86b4f73ade329cb434
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084154079
+status: 3
+tags: []
+user_id: root

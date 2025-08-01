@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/c1dd5567147b4273bd73299e3c7c4676/artifacts
+end_time: 1754084136818
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: c1dd5567147b4273bd73299e3c7c4676
+run_name: whimsical-mouse-56
+run_uuid: c1dd5567147b4273bd73299e3c7c4676
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084132189
+status: 3
+tags: []
+user_id: root

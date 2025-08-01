@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/627354253f8549478fa8c428d8cec112/artifacts
+end_time: 1754084141409
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: 627354253f8549478fa8c428d8cec112
+run_name: invincible-croc-508
+run_uuid: 627354253f8549478fa8c428d8cec112
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084136820
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/c0d136adacd340cda59351c13b345b69/artifacts
+end_time: 1754084147846
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: c0d136adacd340cda59351c13b345b69
+run_name: valuable-conch-387
+run_uuid: c0d136adacd340cda59351c13b345b69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084141412
+status: 3
+tags: []
+user_id: root

@@ -31,44 +31,6 @@
 
 # import mlflow.pyfunc
 # model = mlflow.pyfunc.load_model("mlruns/0/43a4ba4e0ffd4e62bb309de50d33dd7d/artifacts/pipeline_model/")
-import requests
-import pandas as pd
 
-# Sample input (match this to your model's expected columns)
-data = pd.DataFrame([{
-    "age": 39,
-    "workclass": "State-gov",
-    "fnlwgt": 77516,
-    "education": "Bachelors",
-    "education-num": 13,
-    "marital-status": "Never-married",
-    "occupation": "Adm-clerical",
-    "relationship": "Not-in-family",
-    "race": "White",
-    "sex": "Male",
-    "capital-gain": 2174,
-    "capital-loss": 0,
-    "hours-per-week": 40,
-    "native-country": "United-States"
-}])
-
-# Convert to dataframe_split format
-payload = {
-    "dataframe_split": {
-        "columns": data.columns.tolist(),
-        "data": data.values.tolist()
-    }
-}
-
-# Send POST request to MLflow model server
-response = requests.post(
-    url="http://127.0.0.1:5002/invocations",
-    headers={"Content-Type": "application/json"},
-    json=payload
-)
-
-print("Prediction:", response.json())
-
-# or the following curl command will work also
-
-
+import mlflow
+print(mlflow.get_tracking_uri())

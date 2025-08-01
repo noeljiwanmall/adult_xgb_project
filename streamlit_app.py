@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
+import os
 
 st.set_page_config(page_title="Income Prediction", layout="centered")
 st.title("🏡 Predict Income Bracket (>$50K)")
@@ -66,14 +67,30 @@ if submit:
     }
 
     try:
+        is_docker = os.path.exists("/.dockerenv")
+
+        default_url = "http://mlflow_server:5002/invocations" if is_docker else "http://localhost:5002/invocations"
+        
+
         response = requests.post(
-            url="http://127.0.0.1:5002/invocations",
+            # url="http://127.0.0.1:5002/invocations",
+
+            url = os.getenv("MODEL_SERVER_URL", default_url),
+            # url = "http://localhost:5002/invocations",
+            # url = os.getenv("MODEL_SERVER_URL", "http://mlflow_server:5002/invocations"),
             headers={"Content-Type": "application/json"},
             json=payload
         )
         if response.status_code == 200:
             result = response.json()
-            prediction = result["predictions"][0]
+            # prediction = result["predictions"][0]
+
+            if "predictions" in result and isinstance(result["predictions"], list):
+                prediction = result["predictions"][0]
+            else:
+                st.error("⚠️ Invalid response format from model server.")
+
+
             if prediction == 1:
                 st.success("✅ Prediction: Income > $50K")
             else:

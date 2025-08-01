@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/af56acc2a170438db988fe215b983a6a/artifacts
+end_time: 1754084112170
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: af56acc2a170438db988fe215b983a6a
+run_name: intrigued-kite-340
+run_uuid: af56acc2a170438db988fe215b983a6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084106516
+status: 3
+tags: []
+user_id: root

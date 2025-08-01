@@ -1,0 +1,46 @@
+# docker-compose.yml  – validated with `docker compose config`
+services:
+  trainer:
+    build: .
+    command: python train.py
+    volumes:
+      - .:/app
+      - ./mlruns:/app/mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=file:/app/mlruns
+    # health-check: trainer is “healthy” when best_run.txt exists
+    healthcheck:
+      test: ["CMD", "test", "-f", "/app/best_run.txt"]
+      interval: 10s
+      start_period: 30s
+      retries: 60           # → 10 minutes total budget
+
+  model_server:
+    build: .
+    container_name: mlflow_server
+    command: /app/serve_model.sh
+    depends_on:
+      trainer:
+        condition: service_completed_successfully
+    ports:
+      - "5002:5002"
+    volumes:
+      - .:/app
+      - ./mlruns:/app/mlruns
+    environment:
+      - MLFLOW_TRACKING_URI=file:/app/mlruns
+
+  streamlit:
+    build: .
+    command: streamlit run streamlit_app.py
+    depends_on:
+      model_server:
+        condition: service_started   # model_server up → start UI
+    ports:
+      - "18501:8501"
+    volumes:
+      - .:/app
+      - ./mlruns:/app/mlruns
+    environment:
+      - MODEL_SERVER_URL=http://mlflow_server:5002/invocations
+      - PYTHONUNBUFFERED=1

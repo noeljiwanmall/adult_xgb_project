@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/394459425643715224/9467daff826645c1b88073fffe78a96f/artifacts
+end_time: 1754084122900
+entry_point_name: ''
+experiment_id: '394459425643715224'
+lifecycle_stage: active
+run_id: 9467daff826645c1b88073fffe78a96f
+run_name: illustrious-ox-262
+run_uuid: 9467daff826645c1b88073fffe78a96f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754084119527
+status: 3
+tags: []
+user_id: root

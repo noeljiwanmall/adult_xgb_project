@@ -1,0 +1,6 @@
+artifact_location: file:///app/mlruns/394459425643715224
+creation_time: 1754084106430
+experiment_id: '394459425643715224'
+last_update_time: 1754084106430
+lifecycle_stage: active
+name: adult-income-xgb

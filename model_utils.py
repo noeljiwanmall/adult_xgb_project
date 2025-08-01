@@ -23,7 +23,13 @@ def build_preprocessor(X):
 def build_pipeline(preprocessor):
     return Pipeline([
         ('prep', preprocessor),
-        ('model', xgb.XGBClassifier(eval_metric='logloss', use_label_encoder=False))
+        ('model', xgb.XGBClassifier(
+            eval_metric='logloss', 
+            use_label_encoder=False,
+            random_state=42,  # Add random state for reproducibility
+            n_jobs=1,  # Use single thread to avoid potential serialization issues
+            verbosity=0  # Reduce verbosity
+        ))
     ])
 
 def evaluate_pipeline(pipeline, X, y):
